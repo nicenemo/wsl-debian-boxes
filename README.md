@@ -56,4 +56,3 @@ PS C:\Users\Hans Kruse\wsl-debian-boxes> destru-machine.PS1 my-awesome-box
 
 In the _files_ directory, you will find the Debian package sources files that are used.
 You can modify them to use a local mirror. That might be faster than pulling them from the main debian archives directly.
-

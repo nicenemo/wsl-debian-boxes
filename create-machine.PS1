@@ -7,7 +7,7 @@
 # WSL-SetDefaultUser <DistroName> <UserName>
 #
 # Example:
-# 
+#
 # WSL-SetDefaultUser Debian-10 kruse
 #
 # This standard wsl command does not offer the option to set the default user like distribution specific starter programs do.
@@ -19,7 +19,7 @@ Function WSL-SetDefaultUser ($distro, $user) { Get-ItemProperty Registry::HKEY_C
 # The linux username you want to use for your machine.
 # Set it in your user environment variables.
 #
-$env:LINUX_USER=[System.Environment]::GetEnvironmentVariable('LINUX_USER','user') 
+$env:LINUX_USER=[System.Environment]::GetEnvironmentVariable('LINUX_USER','user')
 
 #
 # The location of your Windows home directory as seen from Linux. Note that spaces need to be escaped!.
@@ -27,10 +27,10 @@ $env:LINUX_USER=[System.Environment]::GetEnvironmentVariable('LINUX_USER','user'
 # On Linux this WIN_HOME becoes "/mnt/c/Users/Hans\ Kruse"
 # We create a win_home soft link in your linux home directory.
 #
-$env:WIN_HOME=[System.Environment]::GetEnvironmentVariable('WIN_HOME','user') 
+$env:WIN_HOME=[System.Environment]::GetEnvironmentVariable('WIN_HOME','user')
 
 #
-# Imports the machine from a tar ball. 
+# Imports the machine from a tar ball.
 # First argument is the name of your box, second the file name of the tar bar in the current directory.
 #
 wsl --import $args[0] c:\wsl\$args[0] $args[1]
@@ -54,7 +54,7 @@ wsl -d $args[0] sudo apt-get -y install python3 python3-pip python3-apt aptitude
 # Create the user with password less sudo right.
 #
 echo "Create user with password-less sudo rights."
-wsl -d $args[0] ./personalize.sh $env:LINUX_USER $env:WIN_HOME 
+wsl -d $args[0] ./personalize.sh $env:LINUX_USER $env:WIN_HOME
 echo "Set default user."
 WSL-SetDefaultUser $args[0]  $env:LINUX_USER
 #
@@ -62,7 +62,7 @@ WSL-SetDefaultUser $args[0]  $env:LINUX_USER
 # Then install install ansible.
 #
 wsl -d $args[0] pip install pip --upgrade
-wsl -d $args[0] pip install ansible 
+wsl -d $args[0] pip install ansible
 
 #
 # Remove created function
