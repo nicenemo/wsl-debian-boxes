@@ -61,8 +61,8 @@ WSL-SetDefaultUser $args[0]  $env:LINUX_USER
 # Install a possible upgraded pip in the users .local/bin
 # Then install install ansible.
 #
-wsl -d $args[0] pip install pip --upgrade
-wsl -d $args[0] pip install ansible
+wsl -d $args[0] pip3 install pip --upgrade
+wsl -d $args[0] pip3 install ansible
 
 #
 # Remove created function
