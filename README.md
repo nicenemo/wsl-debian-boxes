@@ -51,7 +51,7 @@ PS C:\Users\Hans Kruse\wsl-debian-boxes> create-machine.PS1 my-awesome-box debia
 Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script.
 
 ```cmd
-PS C:\Users\Hans Kruse\wsl-debian-boxes> destru-machine.PS1 my-awesome-box
+PS C:\Users\Hans Kruse\wsl-debian-boxes> destroy-machine.PS1 my-awesome-box
 ```
 
 In the _files_ directory, you will find the Debian package sources files that are used.
