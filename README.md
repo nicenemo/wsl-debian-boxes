@@ -17,7 +17,7 @@ PS C:\Users\Hans Kruse\wsl-debian-boxes>
 Start [bootstrap-debian-images.PS1](bootstrap-debian-images.PS1) to create local updated, tar ball, machines images for Debian:
 * 9 Stretch
 * 10 Buster
-* 11 BullsEye  
+* 11 BullsEye
 
 **Warning!** You should not run the script below if you use the Debian distribution from the Windows store direcyly as your personal WSL environment. It will be destroyed!.
 
@@ -32,8 +32,8 @@ Once you have created the tar balls, creating new machines is quite fast. Faster
 Machines can be created and personalized with the [create-machine.PS1](create-machine.PS1) script.
 
 * A user is created with sudo rights without needing a password.
-* In the user's home directory a soft link _winhome_ to the windows home directory of the user is created. 
-* The created machines will start with the created user as default user. 
+* In the user's home directory a soft link _winhome_ to the windows home directory of the user is created.
+* The created machines will start with the created user as default user.
 * An updated ansible is installed in the user's ~/.local/bin.
 * ~/.local/bin is added to the user's path.
 * No furter customization is done yet.
@@ -48,8 +48,12 @@ you can then give a name of the machine to be created and the tar ball to use as
 ```cmd
 PS C:\Users\Hans Kruse\wsl-debian-boxes> create-machine.PS1 my-awesome-box debian-buster.tar
 ```
-Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script. 
+Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script.
 
 ```cmd
 PS C:\Users\Hans Kruse\wsl-debian-boxes> destru-machine.PS1 my-awesome-box
 ```
+
+In the _files_ directory, you will find the Debian package sources files that are used.
+You can modify them to use a local mirror. That might be faster than pulling them from the main debian archives directly.
+
