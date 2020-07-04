@@ -56,3 +56,9 @@ PS C:\Users\Hans Kruse\wsl-debian-boxes> destroy-machine.PS1 my-awesome-box
 
 In the _files_ directory, you will find the Debian package sources files that are used.
 You can modify them to use a local mirror. That might be faster than pulling them from the main debian archives directly.
+
+## Beware of smart git on Windows!
+
+Windows on git by default converts line endings to/from Linux/Windows.
+This will go horribly wrong if you edit the bash files from Windows. Either use git from WSL and edit files from WSL. Or turn of line ending conversion on git in WIndows.
+Bash files with Windows line endings do not run.
