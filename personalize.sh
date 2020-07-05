@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 adduser --disabled-password --gecos "" $1
 ln -s "$2" /home/$1/winhome
 echo 'PATH=~/.local/bin:$PATH:' >> /home/$1/.profile

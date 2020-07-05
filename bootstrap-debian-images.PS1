@@ -1,3 +1,4 @@
+#!/usr/bin/env pwsh
 #
 #Get Standard Debian (Stretch?) from Windows store and install
 #

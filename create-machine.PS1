@@ -1,5 +1,4 @@
-
-
+#!/usr/bin/env pwsh
 #
 # Sets the default user of a distribution.
 #
