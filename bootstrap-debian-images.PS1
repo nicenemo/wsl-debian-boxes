@@ -2,8 +2,11 @@
 #
 #Get Standard Debian (Stretch?) from Windows store and install
 #
+$url = "https://aka.ms/wsl-debian-gnulinux"
+$output = "debian.appx"
 echo "Getting Debian WSL image from Microsoft."
-Invoke-WebRequest -Uri https://aka.ms/wsl-debian-gnulinux -OutFile debian.appx -UseBasicParsing
+Import-Module BitsTransfer
+Start-BitsTransfer -Source $url -Destination $output
 echo "Installing image."
 Add-AppxPackage .\debian.appx
 
