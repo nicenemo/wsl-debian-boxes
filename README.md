@@ -2,6 +2,7 @@
 
 This project enables you to quickly create up to date WSL2 Debian instances for testing and
 development purposes. For this you need Windows 10 and hardware that is capable of running WSL2.
+ For some background information I wrote this [blog post](https://hanskruse.eu/post/2020-07-04-throw_away_wsl_environments/)
 
 To use this, create a directory `c:\wsl` where you have rights to write.
 This is used to store your machine's disk images.
