@@ -42,6 +42,8 @@ Faster than installing them from the Windows store. It also allows you to
 easily create multiple identical machines with the same Linux distribution.
 
 Machines can be created and personalized with the [create-machine.PS1](create-machine.PS1) script.
+This scrip and the related  [destroy-machine.PS1](create-machine.PS1) will create virtual machines in c:\wsl.
+Change both scripts if you need it to be anywhere else.
 
 * A user is created with sudo rights without needing a password.
 * In the user's home directory a soft link _winhome_ to the windows home directory of the user is created.
@@ -58,12 +60,12 @@ Two user environment variables need to be set before you can create machines wit
 You can then give a name of the machine to be created and the tar ball to use as command line arguments.
 
 ```cmd
-PS C:\Users\Hans Kruse\wsl-debian-boxes> create-machine.PS1 my-awesome-box debian-buster.tar
+PS PowerShell.exe -ExecutionPolicy Bypass -File .\create-machine.PS1 my-awesome-box debian-buster.tar
 ```
 Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script.
 
 ```cmd
-PS C:\Users\Hans Kruse\wsl-debian-boxes> destroy-machine.PS1 my-awesome-box
+PS PowerShell.exe -ExecutionPolicy Bypass -File .\destroy-machine.PS1 my-awesome-box
 ```
 
 In the _files_ directory, you will find the Debian package sources files that are used.
