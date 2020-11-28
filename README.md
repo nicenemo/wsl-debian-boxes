@@ -28,7 +28,7 @@ to create tar balls for Debian:
 from the Windows store directly as your personal WSL environment. It will be destroyed!
 
 ```cmd
-PS C:\Users\Hans Kruse\wsl-debian-boxes> bootstrap-debian-images.PS1
+ PowerShell.exe -ExecutionPolicy Bypass -File .\bootstrap-debian-images.PS1
 ```
 When successful:
 
