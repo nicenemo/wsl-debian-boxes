@@ -28,11 +28,21 @@ $env:LINUX_USER=[System.Environment]::GetEnvironmentVariable('LINUX_USER','user'
 #
 $env:WIN_HOME=[System.Environment]::GetEnvironmentVariable('WIN_HOME','user')
 
+
+#
+# The location where you want to install your Linux distributions.
+# E.g.: c:\WSL
+# By default Windows will install your linux distributions in your APP_DATA
+# folder in your home directory. My Linux distributions tend to grow large. I
+# prefer them to be somewhere else, if possible on another disk.
+#
+$env:WSL_INSTAL_PATH=[System.Environment]::GetEnvironmentVariable('WSL_INSTAL_PATH','user')
+
 #
 # Imports the machine from a tar ball.
 # First argument is the name of your box, second the file name of the tar bar in the current directory.
 #
-wsl --import $args[0] c:\wsl\$args[0] $args[1]
+wsl --import $args[0] $env:WSL_INSTAL_PATH\$args[0] $args[1]
 
 #
 # Upgrade the created machine first.

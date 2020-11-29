@@ -52,20 +52,23 @@ Change both scripts if you need it to be anywhere else.
 * ~/.local/bin is added to the user's path.
 * No further customization is done yet.
 
-Two user environment variables need to be set before you can create machines with the provided script.
+Three user environment variables need to be set before you can create machines with the provided script.
 
 * *LINUX_USER* Should be the Linux username of the single user that is created in the machine, e.g. *kruse*.
 * *WIN_HOME* Should be a Windows directory as seen from Linux. This will be soft linked as *winhome* in the Linux user's home directory, e.g. */mnt/c/Users/Hans\ Kruse*. Note that spaces need to be escaped!
+* *WSL_INSTALL_PATH* The path where your Linux distribution should live, e.g. *C:\WSL* Please do not add an ending backslash
 
 You can then give a name of the machine to be created and the tar ball to use as command line arguments.
 
+In PowerShell:
+
 ```cmd
-PS PowerShell.exe -ExecutionPolicy Bypass -File .\create-machine.PS1 my-awesome-box debian-buster.tar
+PowerShell.exe -ExecutionPolicy Bypass -File .\create-machine.PS1 my-awesome-box debian-buster.tar
 ```
 Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script.
 
 ```cmd
-PS PowerShell.exe -ExecutionPolicy Bypass -File .\destroy-machine.PS1 my-awesome-box
+PowerShell.exe -ExecutionPolicy Bypass -File .\destroy-machine.PS1 my-awesome-box
 ```
 
 In the _files_ directory, you will find the Debian package sources files that are used.
