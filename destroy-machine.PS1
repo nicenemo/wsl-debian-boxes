@@ -7,8 +7,8 @@
 # folder in your home directory. My Linux distributions tend to grow large. I
 # prefer them to be somewhere else, if possible on another disk.
 #
-$env:WSL_INSTAL_PATH=[System.Environment]::GetEnvironmentVariable('WSL_INSTAL_PATH','user')
+$env:WSL_INSTALL_PATH=[System.Environment]::GetEnvironmentVariable('WSL_INSTAL_PATH','user')
 
 wsl --terminate $args[0]
 wsl --unregister $args[0]
-rm -r -fo $env:WSL_INSTAL_PATH\$args[0]
+rm -r -fo $env:WSL_INSTALL_PATH\$args[0]

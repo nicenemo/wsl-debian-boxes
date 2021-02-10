@@ -36,13 +36,13 @@ $env:WIN_HOME=[System.Environment]::GetEnvironmentVariable('WIN_HOME','user')
 # folder in your home directory. My Linux distributions tend to grow large. I
 # prefer them to be somewhere else, if possible on another disk.
 #
-$env:WSL_INSTAL_PATH=[System.Environment]::GetEnvironmentVariable('WSL_INSTAL_PATH','user')
+$env:WSL_INSTALL_PATH=[System.Environment]::GetEnvironmentVariable('WSL_INSTALL_PATH','user')
 
 #
 # Imports the machine from a tar ball.
 # First argument is the name of your box, second the file name of the tar bar in the current directory.
 #
-wsl --import $args[0] $env:WSL_INSTAL_PATH\$args[0] $args[1]
+wsl --import $args[0] $env:WSL_INSTALL_PATH\$args[0] $args[1]
 
 #
 # Upgrade the created machine first.
