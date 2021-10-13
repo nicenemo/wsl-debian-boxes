@@ -20,8 +20,8 @@ It needs to run from its directory. I did not make it more robust yet.
 Start [bootstrap-debian-images.PS1](bootstrap-debian-images.PS1)
 to create tar balls for Debian:
 
-* 9 Stretch
-* 10 Buster
+* ~~9 Stretch~~
+* ~~10 Buster~~
 * 11 BullsEye
 
 **Warning!** You should not run the script below if you use the Debian distribution
