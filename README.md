@@ -63,12 +63,12 @@ You can then give a name of the machine to be created and the tar ball to use as
 In PowerShell:
 
 ```cmd
-PowerShell.exe -ExecutionPolicy Bypass -File .\create-machine.PS1 my-awesome-box debian-buster.tar
+PowerShell.exe -ExecutionPolicy Bypass -File .\create-machine.PS1 nemolinux debian-bullseye.tar
 ```
 Cleaning up machines can be done with the [destroy-machine.PS1](destroy-machine.PS1) script.
 
 ```cmd
-PowerShell.exe -ExecutionPolicy Bypass -File .\destroy-machine.PS1 my-awesome-box
+PowerShell.exe -ExecutionPolicy Bypass -File .\destroy-machine.PS1 nemolinux
 ```
 
 In the _files_ directory, you will find the Debian package sources files that are used.
