@@ -1,6 +1,6 @@
 # Automatically generated WSL Debian development environments
 
->> WARNING! no longer works with more recent WSL. Needs a rewrite!
+> WARNING! no longer works with more recent WSL. Needs a rewrite!
 
 This project enables you to quickly create up to date WSL2 Debian instances for testing and
 development purposes. For this you need Windows 10 and hardware that is capable of running WSL2.
